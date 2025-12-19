@@ -31,8 +31,7 @@ workflows:
             --build-name=1.0.$BUILD_NUMBER \
             --build-number=$BUILD_NUMBER
     artifacts:
-     #- build/**/outputs/**/*.apk
-      - build/app/outputs/flutter-apk/*.apk       # perfect, no duplicates
+      - build/app/outputs/flutter-apk/*.apk      
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
     publishing:
