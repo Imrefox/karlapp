@@ -1,25 +1,19 @@
-{
-  "project": "karlapp",
-  "latest_version": "1.0.4",
-  "latest_build": 4,
-  "releases": [
+[
+
     {
-      "version": "1.0.4",
-      "build": 4,
-      "date": "2025-12-19",
-      "summary": "Counter now increments by 2",
-      "description": "Here's what's new in Version 1.0.4",
-      "changes": {
-        "changed": [
-          "Counter functionality updated to increment by 2 instead of 1",
-          "Each button press now increases the counter by multiples of 2 (from _counter++ to _counter += 2)"
-        ],
-        "fixed": [
-          "Build output path configured correctly: build/app/outputs/flutter-apk/*.apk (no duplicate APKs)"
-        ]
-      },
-      "notes": "This is a small demo update to showcase incremental changes."
+
+        "language": "en-GB",
+
+        "text": "My app increases in multiples of two"
+
+    },
+
+    {
+
+        "language": "en-US",
+
+        "text": "My app increases in multiples of two"
+
     }
-    // Add older releases here later, newest first
-  ]
-}
+
+]
