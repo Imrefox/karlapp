@@ -1,4 +1,4 @@
-package com.example.karlapp
+package io.codemagic.karlapp
 
 import io.flutter.embedding.android.FlutterActivity
 
