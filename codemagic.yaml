@@ -5,8 +5,8 @@ workflows:
     environment:
       android_signing:
         - upload
-      #groups:
-        #- firebase_credentials
+      groups:
+        - firebase_credentials
       vars:
         PACKAGE_NAME: "io.codemagic.karlapp"        
       flutter: 3.38.5
@@ -26,31 +26,28 @@ workflows:
           flutter test
         ignore_failure: true
       - name: Build APK with Flutter
-        script: | 
-          #BUILD_NUMBER=$(($(google-play get-latest-build-number --package-name "$PACKAGE_NAME" --tracks="$GOOGLE_PLAY_TRACK") + 1))      
+        script: |               
           flutter build apk --release \
             --build-name=1.0.$BUILD_NUMBER \
             --build-number=$BUILD_NUMBER
     artifacts:
-      #- build/**/outputs/**/*.apk
+     #- build/**/outputs/**/*.apk
       - build/app/outputs/flutter-apk/*.apk       # perfect, no duplicates
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
     publishing:
-
       email:
         recipients:
           - karl.suhajda@yahoo.com
         notify:
           success: true
-          failure: false
-           
-      #firebase:   #Alter once connected to Firebase 
-        #firebase_service_account: $FIREBASE_SERVICE_ACCOUNT    
-        #android:
+          failure: false           
+      firebase:   
+        firebase_service_account: $FIREBASE_SERVICE_ACCOUNT    
+        android:
       
-         #app_id: 1:961817617668:android:5a1b442cd079b63840dc51 
+         app_id: 1:92897807876:android:28b74a1a7ce72ed4056f51 
             
-         #groups: 
-          # - androidTesters
+         groups: 
+           - androidTesters
       
