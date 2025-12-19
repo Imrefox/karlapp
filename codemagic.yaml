@@ -9,7 +9,7 @@ workflows:
         #- firebase_credentials
       vars:
         PACKAGE_NAME: "io.codemagic.karlapp"        
-      flutter: 3.38.0
+      flutter: 3.38.5
       xcode: 26      
     scripts:
       - name: Set up local.properties
