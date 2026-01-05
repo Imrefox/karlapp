@@ -10,7 +10,13 @@ workflows:
       vars:
         PACKAGE_NAME: "io.codemagic.karlapp"        
       flutter: 3.38.5
-      xcode: 26      
+      xcode: 26
+    triggering:
+      events:
+      - push
+      branch_patterns:
+        - pattern: 'master'
+      cancel_previous_builds: true      
     scripts:
       - name: Set up local.properties
         script: | 
