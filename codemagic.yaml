@@ -1,6 +1,7 @@
 workflows:
   android-workflow:
     name: Android Workflow
+    instance_type: mac_mini_m4
     max_build_duration: 60
     environment:
       android_signing:
